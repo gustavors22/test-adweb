@@ -34,7 +34,8 @@ const props = defineProps({
                     <img class="h-20 w-20 rounded-lg" :src="product.image" alt="" srcset="">
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                        <p class="truncate max-w-[200px] overflow-hidden whitespace-nowrap text-sm text-gray-900 center">{{ product.description }}</p>
+                    <p class="truncate max-w-[200px] overflow-hidden whitespace-nowrap text-sm text-gray-900 center">{{
+                        product.description }}</p>
                 </td>
                 <td class="px-2 py-4">
                     <Button variant="destructive" @click="handleDeleteProduct(product.id)">Excluir</Button>
