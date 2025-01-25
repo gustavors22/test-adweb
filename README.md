@@ -29,7 +29,7 @@
 Em seguida, crie e ative um ambiente virtual:
 
 ```bash
-virtualenv venv
+python -m venv venv
 source venv/bin/activate  # Para sistemas Unix
 venv\Scripts\activate     # Para Windows
 ```
