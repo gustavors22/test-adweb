@@ -10,13 +10,13 @@ from .serializers import ProductSerializer
 class ProductResourceAPIView(APIView):
     def get(self, request):
         products = Product.objects.all()
-        serializer = ProductSerializer(products, many=True)
+        serializer = ProductSerializer(products, many=True, context={'request': request})
 
         return Response(serializer.data)
     
 
     def post(self, request):
-        serializer = ProductSerializer(data=request.data)
+        serializer = ProductSerializer(data=request.data, context={'request': request})
 
         if serializer.is_valid():
             serializer.save()
